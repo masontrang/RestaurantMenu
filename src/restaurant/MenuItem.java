@@ -1,11 +1,19 @@
 package restaurant;
 
 public class MenuItem {
-    private String name;
-    private String description;
-    private String category;
-    private double price;
-    private boolean isNew;
+    public String name;
+    public String description;
+    public String category;
+    public Double price;
+    public Boolean isNew;
+
+    public MenuItem(String name, String description, String category, Double price, Boolean isNew) {
+        this.name = name;
+        this.description = description;
+        this.category = category;
+        this.price = price;
+        this.isNew = isNew;
+    }
 
     public String getName() {
         return name;
