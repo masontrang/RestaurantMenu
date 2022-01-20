@@ -1,18 +1,28 @@
 package restaurant;
 
 public class MenuItem {
+    public Integer ID;
     public String name;
     public String description;
     public String category;
     public Double price;
     public Boolean isNew;
 
-    public MenuItem(String name, String description, String category, Double price, Boolean isNew) {
+    public MenuItem(Integer ID, String name, String description, String category, Double price, Boolean isNew) {
+        this.ID = ID;
         this.name = name;
         this.description = description;
         this.category = category;
         this.price = price;
         this.isNew = isNew;
+    }
+
+    public Integer getID() {
+        return ID;
+    }
+
+    public void setID(Integer ID) {
+        this.ID = ID;
     }
 
     public String getName() {

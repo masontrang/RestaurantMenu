@@ -1,62 +1,42 @@
 package restaurant;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Scanner;
 
 public class Restaurant {
     public static void main(String[] args) {
-
+        Scanner input = new Scanner(System.in);
         ArrayList<MenuItem> menuItems = new ArrayList<>();
-        MenuItem item1 = new MenuItem("Chicken Wings", "Wings of Chickens", "Appetizer", 15.0, true);
+
+        MenuItem item1 = new MenuItem(1, "Chicken Wings", "Wings of Chickens", "Appetizer", 15.0, true);
         menuItems.add(item1);
-        MenuItem item2 = new MenuItem("French Fries", "Fries from France", "Appetizer", 10.0, true);
+        MenuItem item2 = new MenuItem(2, "French Fries", "Fries from France", "Appetizer", 10.0, true);
         menuItems.add(item2);
-        MenuItem item3 = new MenuItem("Cheese Curds", "Curds of Cheese", "Appetizer", 12.0, true);
+        MenuItem item3 = new MenuItem(3, "Cheese Curds", "Curds of Cheese", "Appetizer", 12.0, true);
         menuItems.add(item3);
 
-        Menu.printMenu(menuItems);
-        Menu.addItems(menuItems);
+        Menu menu = new Menu(menuItems);
+        System.out.println("Welcome to the " + menu.RESTAURANTNAME + " menu");
 
-
-
-//        for (int i = 0; i< menuItems.size(); i++) {
-//            System.out.println("Name: " + menuItems.get(i).getName());
-//            System.out.println("Description: " + menuItems.get(i).getDescription());
-//            System.out.println("Category: " + menuItems.get(i).getCategory());
-//            System.out.println("Price: " + menuItems.get(i).getPrice());
-//            System.out.println("New Item: " + menuItems.get(i).isNew());
-//        }
-
-
-
-//        MenuItem item = new MenuItem("Chicken Wings", "Wings of Chickens", "Appetizer", 10.0, true);
-//        System.out.println("Name: " + item.getName());
-//        System.out.println("Description: " + item.getDescription());
-//        System.out.println("Category: " + item.getCategory());
-//        System.out.println("Price: " + item.getPrice());
-//        System.out.println("New: " + item.isNew());
-//        printMenu(item);
+        while(true) {
+            System.out.println("Please make a selection from the choices below: \n 1-Print Menu \n 2-Add Items \n 3-Remove Items \n 4-Compare Two Menu Items \n 5-View Menu Last Updated Date");
+            Integer userInput = input.nextInt();
+            if (userInput == 1) {
+                menu.printMenu();
+            }
+            if (userInput == 2) {
+                menu.addItems();
+            }
+            if (userInput == 3) {
+                menu.removeItems();
+            }
+            if (userInput == 4) {
+                menu.checkItems();
+            }
+            if (userInput == 5) {
+                menu.lastUpdated();
+            }
+        }
     }
-
-//    public static ArrayList<MenuItem> baseMenu() {
-//
-//
-//    }
-
-
-
-
-
-//    public static ArrayList<HashMap<String, String>> addItem(){
-//    return 0 ;
-//    }
-
-//    public static String printMenu(item){
-//        System.out.println("Name: " + item.getName());
-
-
-
-
-
 
 }
