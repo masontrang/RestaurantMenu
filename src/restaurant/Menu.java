@@ -62,8 +62,9 @@ public class Menu {
                 int itemQuantity = input.nextInt();
 
                 for(int i = 0; i<itemQuantity; i++) {
-                    Integer ID = this.menuItems.size() + 1;
-                    System.out.println("Item ID#: " + ID);
+//                    Integer ID = this.menuItems.size() + 1;
+//                    Integer ID = getID();
+//                    System.out.println("Item ID#: " + ID);
 
                     System.out.println("Input Name: ");
                     String nameInput = input.next();
@@ -80,7 +81,7 @@ public class Menu {
                     System.out.println("Input is Item New (true/false): ");
                     Boolean isNewInput = input.nextBoolean();
 
-                    MenuItem addItem = new MenuItem(ID, nameInput, descriptionInput, categoryInput, priceInput, isNewInput);
+                    MenuItem addItem = new MenuItem(nameInput, descriptionInput, categoryInput, priceInput, isNewInput);
                     this.menuItems.add(addItem);
                 }
                 lastUpdated = new Date();

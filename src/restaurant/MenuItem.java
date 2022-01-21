@@ -1,15 +1,19 @@
 package restaurant;
 
 public class MenuItem {
-    public Integer ID;
+    public static Integer itemID = 1;
+    private int ID;
     public String name;
     public String description;
     public String category;
     public Double price;
     public Boolean isNew;
 
-    public MenuItem(Integer ID, String name, String description, String category, Double price, Boolean isNew) {
-        this.ID = ID;
+
+
+    public MenuItem(String name, String description, String category, Double price, Boolean isNew) {
+        this.ID = itemID;
+        itemID++;
         this.name = name;
         this.description = description;
         this.category = category;

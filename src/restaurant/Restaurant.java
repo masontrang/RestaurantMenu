@@ -8,11 +8,11 @@ public class Restaurant {
         Scanner input = new Scanner(System.in);
         ArrayList<MenuItem> menuItems = new ArrayList<>();
 
-        MenuItem item1 = new MenuItem(1, "Chicken Wings", "Wings of Chickens", "Appetizer", 15.0, true);
+        MenuItem item1 = new MenuItem( "Chicken Wings", "Wings of Chickens", "Appetizer", 15.0, true);
         menuItems.add(item1);
-        MenuItem item2 = new MenuItem(2, "French Fries", "Fries from France", "Appetizer", 10.0, true);
+        MenuItem item2 = new MenuItem( "French Fries", "Fries from France", "Appetizer", 10.0, true);
         menuItems.add(item2);
-        MenuItem item3 = new MenuItem(3, "Cheese Curds", "Curds of Cheese", "Appetizer", 12.0, true);
+        MenuItem item3 = new MenuItem( "Cheese Curds", "Curds of Cheese", "Appetizer", 12.0, true);
         menuItems.add(item3);
 
         Menu menu = new Menu(menuItems);
